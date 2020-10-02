@@ -65,7 +65,7 @@ public class RequirementsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	@Override
-	protected boolean isSwitchFor(EPackage ePackage) {
+	protected boolean isSwitchFor(final EPackage ePackage) {
 		return ePackage == modelPackage;
 	}
 
