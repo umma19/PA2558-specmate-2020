@@ -169,7 +169,7 @@ public class RequirementsSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseCEGModel(CEGModel object) {
+	public T caseCEGModel(final CEGModel object) {
 		return null;
 	}
 
