@@ -200,7 +200,7 @@ public class CDOPersistencyService implements IPersistencyService, IListener {
 		LifecycleUtil.deactivate(connector);
 	}
 
-	private void startPersistency() throws SpecmateException {
+	private void startPersistency() {
 		OMPlatform.INSTANCE.setDebugging(true);
 		OMPlatform.INSTANCE.addLogHandler(PrintLogHandler.CONSOLE);
 		OMPlatform.INSTANCE.addTraceHandler(PrintTraceHandler.CONSOLE);
@@ -334,7 +334,7 @@ public class CDOPersistencyService implements IPersistencyService, IListener {
 		this.transactionGauge.dec();
 	}
 
-	/* package */CDOTransaction openCDOTransaction() throws SpecmateException {
+	/* package */CDOTransaction openCDOTransaction() {
 		CDOTransaction transaction = session.openTransaction();
 		transaction.options().addChangeSubscriptionPolicy(CDOAdapterPolicy.ALL);
 		transaction.options().setInvalidationNotificationEnabled(true);
@@ -343,7 +343,7 @@ public class CDOPersistencyService implements IPersistencyService, IListener {
 		return transaction;
 	}
 
-	/* package */CDOView openCDOView() throws SpecmateException {
+	/* package */CDOView openCDOView() {
 		CDOView view = session.openView();
 		view.options().addChangeSubscriptionPolicy(CDOAdapterPolicy.ALL);
 		view.options().setInvalidationNotificationEnabled(true);
