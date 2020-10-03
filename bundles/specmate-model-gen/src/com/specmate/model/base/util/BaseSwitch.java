@@ -106,15 +106,15 @@ public class BaseSwitch<T> extends Switch<T> {
 				return result;
 			}
 			case BasePackage.ISPECMATE_MODEL_OBJECT: {
-				ISpecmateModelObject iSpecmateModelObject = (ISpecmateModelObject)theEObject;
-				T result = caseISpecmateModelObject(iSpecmateModelObject);
-				if (result == null) result = caseIContainer(iSpecmateModelObject);
-				if (result == null) result = caseITracingElement(iSpecmateModelObject);
-				if (result == null) result = caseIContentElement(iSpecmateModelObject);
-				if (result == null) result = caseIID(iSpecmateModelObject);
-				if (result == null) result = caseINamed(iSpecmateModelObject);
-				if (result == null) result = caseIDescribed(iSpecmateModelObject);
-				if (result == null) result = caseIRecycled(iSpecmateModelObject);
+				ISpecmateModelObject iSMModel = (ISpecmateModelObject)theEObject;
+				T result = caseISpecmateModelObject(iSMModel);
+				if (result == null) result = caseIContainer(iSMModel);
+				if (result == null) result = caseITracingElement(iSMModel);
+				if (result == null) result = caseIContentElement(iSMModel);
+				if (result == null) result = caseIID(iSMModel);
+				if (result == null) result = caseINamed(iSMModel);
+				if (result == null) result = caseIDescribed(iSMModel);
+				if (result == null) result = caseIRecycled(iSMModel);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
