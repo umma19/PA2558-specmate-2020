@@ -109,7 +109,7 @@ public class RequirementsSwitch<T> extends Switch<T> {
 				return result;
 			}
 			case RequirementsPackage.CEG_NODE: {
-				CEGNode cegNode = (CEGNode)theEObject;
+				final CEGNode cegNode = (CEGNode)theEObject;
 				T result = caseCEGNode(cegNode);
 				if (result == null) result = caseIModelNode(cegNode);
 				if (result == null) result = caseISpecmatePositionableModelObject(cegNode);
