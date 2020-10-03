@@ -92,7 +92,7 @@ public class RequirementsSwitch<T> extends Switch<T> {
 				if (result == null) result = caseIDescribed(requirement);
 				if (result == null) result = caseIRecycled(requirement);
 				if (result == null) result = defaultCase(theEObject);
-				return result;
+				break;
 			}
 			case RequirementsPackage.CEG_MODEL: {
 				CEGModel cegModel = (CEGModel)theEObject;
@@ -106,7 +106,7 @@ public class RequirementsSwitch<T> extends Switch<T> {
 				if (result == null) result = caseIDescribed(cegModel);
 				if (result == null) result = caseIRecycled(cegModel);
 				if (result == null) result = defaultCase(theEObject);
-				return result;
+				break;
 			}
 			case RequirementsPackage.CEG_NODE: {
 				CEGNode cegNode = (CEGNode)theEObject;
@@ -122,7 +122,7 @@ public class RequirementsSwitch<T> extends Switch<T> {
 				if (result == null) result = caseIDescribed(cegNode);
 				if (result == null) result = caseIRecycled(cegNode);
 				if (result == null) result = defaultCase(theEObject);
-				return result;
+				break;
 			}
 			case RequirementsPackage.CEG_CONNECTION: {
 				CEGConnection cegConnection = (CEGConnection)theEObject;
@@ -137,24 +137,25 @@ public class RequirementsSwitch<T> extends Switch<T> {
 				if (result == null) result = caseIDescribed(cegConnection);
 				if (result == null) result = caseIRecycled(cegConnection);
 				if (result == null) result = defaultCase(theEObject);
-				return result;
+				break;
 			}
 			default: return defaultCase(theEObject);
 		}
+		return result;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Requirement</em>'.
+	 * Returns the result of interpreting
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Requirement</em>'.
+	 * @return the result of interpreting
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseRequirement(Requirement object) {
+	public T caseRequirement(final Requirement object) {
 		return null;
 	}
 
@@ -395,7 +396,7 @@ public class RequirementsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	@Override
-	public T defaultCase(EObject object) {
+	public T defaultCase(final EObject object) {
 		return null;
 	}
 

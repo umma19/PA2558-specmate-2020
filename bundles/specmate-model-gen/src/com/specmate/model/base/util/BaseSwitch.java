@@ -52,7 +52,7 @@ public class BaseSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	@Override
-	protected boolean isSwitchFor(EPackage ePackage) {
+	protected boolean isSwitchFor(final EPackage ePackage) {
 		return ePackage == modelPackage;
 	}
 
@@ -67,7 +67,7 @@ public class BaseSwitch<T> extends Switch<T> {
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
 			case BasePackage.INAMED: {
-				INamed iNamed = (INamed)theEObject;
+				final INamed iNamed = (INamed)theEObject;
 				T result = caseINamed(iNamed);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
