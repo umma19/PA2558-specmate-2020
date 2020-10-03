@@ -80,6 +80,7 @@ public class CDOPersistencyServiceConfig {
 	 * Starts a thread that periodically checks if the CDO server is still
 	 * reachable
 	 */
+
 	private void startMonitoringThread() {
 
 		this.checkConnectionEexcutor = Executors.newScheduledThreadPool(1);
@@ -96,7 +97,7 @@ public class CDOPersistencyServiceConfig {
 					}
 				}
 			} else {
-				if (checkConnection()) {
+				 {
 					try {
 						this.logService.log(LogService.LOG_INFO, "Connection to CDO server established.");
 						registerConfiguration();
