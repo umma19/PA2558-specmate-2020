@@ -494,6 +494,7 @@ public class CDOPersistencyService implements IPersistencyService, IListener {
 	}
 
 	public void removeModelProvider(IPackageProvider provider) {
+		//Remove model provider
 	}
 
 	@Reference
