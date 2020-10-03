@@ -285,7 +285,7 @@ public class RequirementsSwitch<T> extends Switch<T> {
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>IContainer</em>'.
+	 * @return the result of interpreting of'<em>IContainer</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
