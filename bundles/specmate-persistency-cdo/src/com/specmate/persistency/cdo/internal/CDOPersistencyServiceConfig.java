@@ -62,7 +62,7 @@ public class CDOPersistencyServiceConfig {
 		this.host = this.configService.getConfigurationProperty(KEY_SERVER_HOST_PORT);
 		this.connected = false;
 		String[] hostport = StringUtils.split(this.host, ":");
-		if (hostport == null || !(hostport.length == 2)) {
+		if (hostport == null || (hostport.length != 2)) {
 			throw new SpecmateInternalException(ErrorCode.CONFIGURATION,
 					"Invalid format for CDO host " + KEY_SERVER_HOST_PORT + ": " + this.host + ". The expected format is [hostName]:[port]");
 		}
