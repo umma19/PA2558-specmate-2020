@@ -261,7 +261,7 @@ public class HistoryProviderImpl implements IHistoryProvider {
 			try {
 				transaction = persistency.openTransaction();
 				CDOObject obj = ((TransactionImpl) transaction).getInternalTransaction().getObject(id);
-				if (obj != null && obj instanceof INamed) {
+				if (obj instanceof INamed) {
 					objectName = ((INamed) obj).getName();
 				}
 			} catch (SpecmateException e) {
