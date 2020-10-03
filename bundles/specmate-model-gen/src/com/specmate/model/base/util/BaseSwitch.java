@@ -65,49 +65,45 @@ public class BaseSwitch<T> extends Switch<T> {
 	 */
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
+		T result = null;
 		switch (classifierID) {
 			case BasePackage.INAMED: {
 				INamed iNamed = (INamed)theEObject;
-				T result = caseINamed(iNamed);
+				result = caseINamed(iNamed);
 				if (result == null) result = defaultCase(theEObject);
-				return result;
 			}
 			case BasePackage.IDESCRIBED: {
 				IDescribed iDescribed = (IDescribed)theEObject;
-				T result = caseIDescribed(iDescribed);
+				result = caseIDescribed(iDescribed);
 				if (result == null) result = defaultCase(theEObject);
-				return result;
 			}
 			case BasePackage.IID: {
 				IID iid = (IID)theEObject;
-				T result = caseIID(iid);
+				result = caseIID(iid);
 				if (result == null) result = defaultCase(theEObject);
-				return result;
 			}
 			case BasePackage.ICONTENT_ELEMENT: {
 				IContentElement iContentElement = (IContentElement)theEObject;
-				T result = caseIContentElement(iContentElement);
+				result = caseIContentElement(iContentElement);
 				if (result == null) result = caseIID(iContentElement);
 				if (result == null) result = caseINamed(iContentElement);
 				if (result == null) result = caseIDescribed(iContentElement);
 				if (result == null) result = caseIRecycled(iContentElement);
 				if (result == null) result = defaultCase(theEObject);
-				return result;
 			}
 			case BasePackage.ICONTAINER: {
 				IContainer iContainer = (IContainer)theEObject;
-				T result = caseIContainer(iContainer);
+				result = caseIContainer(iContainer);
 				if (result == null) result = caseIContentElement(iContainer);
 				if (result == null) result = caseIID(iContainer);
 				if (result == null) result = caseINamed(iContainer);
 				if (result == null) result = caseIDescribed(iContainer);
 				if (result == null) result = caseIRecycled(iContainer);
 				if (result == null) result = defaultCase(theEObject);
-				return result;
 			}
 			case BasePackage.ISPECMATE_MODEL_OBJECT: {
 				ISpecmateModelObject iSMModel = (ISpecmateModelObject)theEObject;
-				T result = caseISpecmateModelObject(iSMModel);
+				result = caseISpecmateModelObject(iSMModel);
 				if (result == null) result = caseIContainer(iSMModel);
 				if (result == null) result = caseITracingElement(iSMModel);
 				if (result == null) result = caseIContentElement(iSMModel);
@@ -116,11 +112,10 @@ public class BaseSwitch<T> extends Switch<T> {
 				if (result == null) result = caseIDescribed(iSMModel);
 				if (result == null) result = caseIRecycled(iSMModel);
 				if (result == null) result = defaultCase(theEObject);
-				return result;
 			}
 			case BasePackage.FOLDER: {
 				Folder folder = (Folder)theEObject;
-				T result = caseFolder(folder);
+				result = caseFolder(folder);
 				if (result == null) result = caseISpecmateModelObject(folder);
 				if (result == null) result = caseIContainer(folder);
 				if (result == null) result = caseITracingElement(folder);
@@ -130,23 +125,20 @@ public class BaseSwitch<T> extends Switch<T> {
 				if (result == null) result = caseIDescribed(folder);
 				if (result == null) result = caseIRecycled(folder);
 				if (result == null) result = defaultCase(theEObject);
-				return result;
 			}
 			case BasePackage.IPOSITIONABLE: {
 				IPositionable iPositionable = (IPositionable)theEObject;
-				T result = caseIPositionable(iPositionable);
+				result = caseIPositionable(iPositionable);
 				if (result == null) result = defaultCase(theEObject);
-				return result;
 			}
 			case BasePackage.IEXTERNAL: {
 				IExternal iExternal = (IExternal)theEObject;
-				T result = caseIExternal(iExternal);
+				result = caseIExternal(iExternal);
 				if (result == null) result = defaultCase(theEObject);
-				return result;
 			}
 			case BasePackage.ISPECMATE_POSITIONABLE_MODEL_OBJECT: {
 				ISpecmatePositionableModelObject iSpecmatePositionableModelObject = (ISpecmatePositionableModelObject)theEObject;
-				T result = caseISpecmatePositionableModelObject(iSpecmatePositionableModelObject);
+				result = caseISpecmatePositionableModelObject(iSpecmatePositionableModelObject);
 				if (result == null) result = caseISpecmateModelObject(iSpecmatePositionableModelObject);
 				if (result == null) result = caseIContainer(iSpecmatePositionableModelObject);
 				if (result == null) result = caseITracingElement(iSpecmatePositionableModelObject);
@@ -156,11 +148,10 @@ public class BaseSwitch<T> extends Switch<T> {
 				if (result == null) result = caseIDescribed(iSpecmatePositionableModelObject);
 				if (result == null) result = caseIRecycled(iSpecmatePositionableModelObject);
 				if (result == null) result = defaultCase(theEObject);
-				return result;
 			}
 			case BasePackage.IMODEL_CONNECTION: {
 				IModelConnection iModelConnection = (IModelConnection)theEObject;
-				T result = caseIModelConnection(iModelConnection);
+				result = caseIModelConnection(iModelConnection);
 				if (result == null) result = caseISpecmateModelObject(iModelConnection);
 				if (result == null) result = caseIContainer(iModelConnection);
 				if (result == null) result = caseITracingElement(iModelConnection);
@@ -170,11 +161,10 @@ public class BaseSwitch<T> extends Switch<T> {
 				if (result == null) result = caseIDescribed(iModelConnection);
 				if (result == null) result = caseIRecycled(iModelConnection);
 				if (result == null) result = defaultCase(theEObject);
-				return result;
 			}
 			case BasePackage.IMODEL_NODE: {
 				IModelNode iModelNode = (IModelNode)theEObject;
-				T result = caseIModelNode(iModelNode);
+				result = caseIModelNode(iModelNode);
 				if (result == null) result = caseISpecmatePositionableModelObject(iModelNode);
 				if (result == null) result = caseISpecmateModelObject(iModelNode);
 				if (result == null) result = caseIContainer(iModelNode);
@@ -185,33 +175,30 @@ public class BaseSwitch<T> extends Switch<T> {
 				if (result == null) result = caseIDescribed(iModelNode);
 				if (result == null) result = caseIRecycled(iModelNode);
 				if (result == null) result = defaultCase(theEObject);
-				return result;
 			}
 			case BasePackage.ITRACING_ELEMENT: {
 				ITracingElement iTracingElement = (ITracingElement)theEObject;
-				T result = caseITracingElement(iTracingElement);
+				result = caseITracingElement(iTracingElement);
 				if (result == null) result = defaultCase(theEObject);
-				return result;
 			}
 			case BasePackage.IRECYCLED: {
 				IRecycled iRecycled = (IRecycled)theEObject;
-				T result = caseIRecycled(iRecycled);
+				result = caseIRecycled(iRecycled);
 				if (result == null) result = defaultCase(theEObject);
-				return result;
 			}
 			case BasePackage.MODEL_IMAGE: {
 				ModelImage modelImage = (ModelImage)theEObject;
-				T result = caseModelImage(modelImage);
+				result = caseModelImage(modelImage);
 				if (result == null) result = caseIContentElement(modelImage);
 				if (result == null) result = caseIID(modelImage);
 				if (result == null) result = caseINamed(modelImage);
 				if (result == null) result = caseIDescribed(modelImage);
 				if (result == null) result = caseIRecycled(modelImage);
 				if (result == null) result = defaultCase(theEObject);
-				return result;
 			}
-			default: return defaultCase(theEObject);
+			default: result = defaultCase(theEObject);
 		}
+		return result;
 	}
 
 	/**
