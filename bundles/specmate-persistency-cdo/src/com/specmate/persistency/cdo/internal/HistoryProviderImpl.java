@@ -164,7 +164,7 @@ public class HistoryProviderImpl implements IHistoryProvider {
 			try {
 				Thread.sleep(100);
 			} catch (InterruptedException e) {
-				// ignore
+				Thread.currentThread().interrupt();
 			}
 			cdoHistoryElements = cdoHistory.getElements();
 		}
