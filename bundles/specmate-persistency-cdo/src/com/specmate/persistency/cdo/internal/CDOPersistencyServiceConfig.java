@@ -139,7 +139,6 @@ public class CDOPersistencyServiceConfig {
 	private boolean checkConnection() {
 		try (Socket socket = new Socket()) {
 			socket.connect(new InetSocketAddress(this.hostName, this.port), 5000);
-			socket.close();
 			return true;
 		} catch (IOException e) {
 			return false; // Either timeout or unreachable or failed DNS lookup.
