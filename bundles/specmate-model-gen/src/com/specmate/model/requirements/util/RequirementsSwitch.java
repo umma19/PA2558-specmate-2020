@@ -95,7 +95,7 @@ public class RequirementsSwitch<T> extends Switch<T> {
 				return result;
 			}
 			case RequirementsPackage.CEG_MODEL: {
-				CEGModel cegModel = (CEGModel)theEObject;
+				final CEGModel cegModel = (CEGModel)theEObject;
 				T result = caseCEGModel(cegModel);
 				if (result == null) result = caseISpecmateModelObject(cegModel);
 				if (result == null) result = caseIContainer(cegModel);
