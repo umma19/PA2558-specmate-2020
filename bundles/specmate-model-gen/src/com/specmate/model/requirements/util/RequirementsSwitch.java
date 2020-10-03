@@ -65,8 +65,8 @@ public class RequirementsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	@Override
-	protected boolean isSwitchFor(final EPackage ePackage) {
-		return ePackage == modelPackage;
+  protected boolean isSwitchFor(final EPackage ePackage) {
+		return ePackage.equals(modelPackage);
 	}
 
 	/**
@@ -77,7 +77,7 @@ public class RequirementsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	@Override
-	protected T doSwitch(int classifierID, EObject theEObject) {
+	protected T doSwitch(final int classifierID, EObject theEObject) {
 		T result = null;
 		switch (classifierID) {
 			case RequirementsPackage.REQUIREMENT: {
@@ -95,7 +95,7 @@ public class RequirementsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 			}
 			case RequirementsPackage.CEG_MODEL: {
-				CEGModel cegModel = (CEGModel)theEObject;
+				final CEGModel cegModel = (CEGModel)theEObject;
 				result = caseCEGModel(cegModel);
 				if (result == null) result = caseISpecmateModelObject(cegModel);
 				if (result == null) result = caseIContainer(cegModel);
@@ -108,7 +108,7 @@ public class RequirementsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 			}
 			case RequirementsPackage.CEG_NODE: {
-				CEGNode cegNode = (CEGNode)theEObject;
+				final CEGNode cegNode = (CEGNode)theEObject;
 				result = caseCEGNode(cegNode);
 				if (result == null) result = caseIModelNode(cegNode);
 				if (result == null) result = caseISpecmatePositionableModelObject(cegNode);
@@ -148,7 +148,7 @@ public class RequirementsSwitch<T> extends Switch<T> {
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting
+	 * @return the result of interpreting the object as an instance of '<em>Requirement</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
@@ -283,7 +283,7 @@ public class RequirementsSwitch<T> extends Switch<T> {
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>IContainer</em>'.
+	 * @return the result of interpreting of'<em>IContainer</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
