@@ -77,10 +77,10 @@ public class RequirementsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	@Override
-	protected T doSwitch(int classifierID, EObject theEObject) {
+	protected T doSwitch(final int classifierID, EObject theEObject) {
 		switch (classifierID) {
 			case RequirementsPackage.REQUIREMENT: {
-				Requirement requirement = (Requirement)theEObject;
+				final Requirement requirement = (Requirement)theEObject;
 				T result = caseRequirement(requirement);
 				if (result == null) result = caseISpecmateModelObject(requirement);
 				if (result == null) result = caseIExternal(requirement);

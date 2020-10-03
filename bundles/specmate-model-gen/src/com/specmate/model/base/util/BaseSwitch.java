@@ -37,7 +37,8 @@ public class BaseSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BaseSwitch() {
+	public BaseSwitch() { 
+		super();
 		if (modelPackage == null) {
 			modelPackage = BasePackage.eINSTANCE;
 		}
@@ -53,7 +54,7 @@ public class BaseSwitch<T> extends Switch<T> {
 	 */
 	@Override
 	protected boolean isSwitchFor(EPackage ePackage) {
-		return ePackage == modelPackage;
+		return ePackage.equals(modelPackage);
 	}
 
 	/**
