@@ -66,7 +66,7 @@ public class RequirementsSwitch<T> extends Switch<T> {
 	 */
 	@Override
 	protected boolean isSwitchFor(EPackage ePackage) {
-		return ePackage == modelPackage;
+		return ePackage.equals(modelPackage);
 	}
 
 	/**
