@@ -138,6 +138,11 @@ public class RequirementImpl extends CDOObjectImpl implements Requirement {
 	 * @generated
 	 * @ordered
 	 */
+
+	/**  
+	* Use of Lazy final(non-constant final variable created with a type-specific default value)
+	* source : https://cr.openjdk.java.net/~jrose/draft/lazy-final.html#:~:text=The%20uninitialized%20default%20value%20(null,initialized%20shortly%20it%20is%20created.&text=In%20addition%2C%20the%20language%20does,final%20to%20be%20initialized%20twice. 
+	*/
 	protected static final String SOURCE_EDEFAULT = null;
 
 	/**
@@ -168,6 +173,11 @@ public class RequirementImpl extends CDOObjectImpl implements Requirement {
 	 * @generated
 	 * @ordered
 	 */
+
+	/**  
+	* Use of Lazy final(non-constant final variable created with a type-specific default value)
+	* source : https://cr.openjdk.java.net/~jrose/draft/lazy-final.html#:~:text=The%20uninitialized%20default%20value%20(null,initialized%20shortly%20it%20is%20created.&text=In%20addition%2C%20the%20language%20does,final%20to%20be%20initialized%20twice. 
+	*/
 	protected static final String TAC_EDEFAULT = null;
 
 	/**
@@ -178,6 +188,11 @@ public class RequirementImpl extends CDOObjectImpl implements Requirement {
 	 * @generated
 	 * @ordered
 	 */
+
+	/**  
+	* Use of Lazy final(non-constant final variable created with a type-specific default value)
+	* source : https://cr.openjdk.java.net/~jrose/draft/lazy-final.html#:~:text=The%20uninitialized%20default%20value%20(null,initialized%20shortly%20it%20is%20created.&text=In%20addition%2C%20the%20language%20does,final%20to%20be%20initialized%20twice. 
+	*/
 	protected static final String IMPLEMENTING_UNIT_EDEFAULT = null;
 
 	/**
@@ -188,6 +203,16 @@ public class RequirementImpl extends CDOObjectImpl implements Requirement {
 	 * @generated
 	 * @ordered
 	 */
+
+	/**  
+	* Use of Lazy final(non-constant final variable created with a type-specific default value)
+	* source : https://cr.openjdk.java.net/~jrose/draft/lazy-final.html#:~:text=The%20uninitialized%20default%20value%20(null,initialized%20shortly%20it%20is%20created.&text=In%20addition%2C%20the%20language%20does,final%20to%20be%20initialized%20twice. 
+	*/
+
+	/**  
+	* Use of Lazy final(non-constant final variable created with a type-specific default value)
+	* source : https://cr.openjdk.java.net/~jrose/draft/lazy-final.html#:~:text=The%20uninitialized%20default%20value%20(null,initialized%20shortly%20it%20is%20created.&text=In%20addition%2C%20the%20language%20does,final%20to%20be%20initialized%20twice. 
+	*/
 	protected static final String IMPLEMENTING_BO_TEAM_EDEFAULT = null;
 
 	/**
@@ -198,6 +223,11 @@ public class RequirementImpl extends CDOObjectImpl implements Requirement {
 	 * @generated
 	 * @ordered
 	 */
+
+	/**  
+	* Use of Lazy final(non-constant final variable created with a type-specific default value)
+	* source : https://cr.openjdk.java.net/~jrose/draft/lazy-final.html#:~:text=The%20uninitialized%20default%20value%20(null,initialized%20shortly%20it%20is%20created.&text=In%20addition%2C%20the%20language%20does,final%20to%20be%20initialized%20twice. 
+	*/
 	protected static final String IMPLEMENTING_IT_TEAM_EDEFAULT = null;
 
 	/**
@@ -208,6 +238,11 @@ public class RequirementImpl extends CDOObjectImpl implements Requirement {
 	 * @generated
 	 * @ordered
 	 */
+	
+	/**  
+	* Use of Lazy final(non-constant final variable created with a type-specific default value)
+	* source : https://cr.openjdk.java.net/~jrose/draft/lazy-final.html#:~:text=The%20uninitialized%20default%20value%20(null,initialized%20shortly%20it%20is%20created.&text=In%20addition%2C%20the%20language%20does,final%20to%20be%20initialized%20twice. 
+	*/
 	protected static final String PLANNED_RELEASE_EDEFAULT = null;
 
 	/**
@@ -218,6 +253,11 @@ public class RequirementImpl extends CDOObjectImpl implements Requirement {
 	 * @generated
 	 * @ordered
 	 */
+
+	/**  
+	* Use of Lazy final(non-constant final variable created with a type-specific default value)
+	* source : https://cr.openjdk.java.net/~jrose/draft/lazy-final.html#:~:text=The%20uninitialized%20default%20value%20(null,initialized%20shortly%20it%20is%20created.&text=In%20addition%2C%20the%20language%20does,final%20to%20be%20initialized%20twice. 
+	*/
 	protected static final String STATUS_EDEFAULT = null;
 
 	/**
@@ -238,6 +278,11 @@ public class RequirementImpl extends CDOObjectImpl implements Requirement {
 	 * @generated
 	 * @ordered
 	 */
+
+	/**  
+	* Use of Lazy final(non-constant final variable created with a type-specific default value)
+	* source : https://cr.openjdk.java.net/~jrose/draft/lazy-final.html#:~:text=The%20uninitialized%20default%20value%20(null,initialized%20shortly%20it%20is%20created.&text=In%20addition%2C%20the%20language%20does,final%20to%20be%20initialized%20twice. 
+	*/
 	protected static final String PLATFORM_EDEFAULT = null;
 
 	/**
@@ -934,6 +979,7 @@ public class RequirementImpl extends CDOObjectImpl implements Requirement {
 			case RequirementsPackage.REQUIREMENT__EXT_ID2:
 				return EXT_ID2_EDEFAULT == null ? getExtId2() != null : !EXT_ID2_EDEFAULT.equals(getExtId2());
 			case RequirementsPackage.REQUIREMENT__SOURCE:
+				// SOURCE_EDEFAULT is a compile time constant hence require nullability check to verify change.
 				if(SOURCE_EDEFAULT == null){
 					return getSource() != null;
 				}
@@ -945,6 +991,7 @@ public class RequirementImpl extends CDOObjectImpl implements Requirement {
 			case RequirementsPackage.REQUIREMENT__NUMBER_OF_TESTS:
 				return getNumberOfTests() != NUMBER_OF_TESTS_EDEFAULT;
 			case RequirementsPackage.REQUIREMENT__TAC:
+				// TAC_EDEFAULT is a compile time constant hence require null check to verify change.
 				if(TAC_EDEFAULT == null){
 					return getTac() != null;
 				}
@@ -952,6 +999,7 @@ public class RequirementImpl extends CDOObjectImpl implements Requirement {
 					return !TAC_EDEFAULT.equals(getTac());
 				}
 			case RequirementsPackage.REQUIREMENT__IMPLEMENTING_UNIT:
+				// IMPLEMENTING_UNIT_EDEFAULT is a compile time constant hence require null check to verify change.
 				if(IMPLEMENTING_UNIT_EDEFAULT == null){
 					return getImplementingUnit() != null;
 				}
@@ -959,6 +1007,7 @@ public class RequirementImpl extends CDOObjectImpl implements Requirement {
 					return !IMPLEMENTING_UNIT_EDEFAULT.equals(getImplementingUnit());
 				}
 			case RequirementsPackage.REQUIREMENT__IMPLEMENTING_BO_TEAM:
+				// IMPLEMENTING_BO_TEAM_EDEFAULT is a compile time constant hence require null check to verify change.
 				if(IMPLEMENTING_BO_TEAM_EDEFAULT == null){
 					return getImplementingBOTeam() != null;
 				}
@@ -966,6 +1015,7 @@ public class RequirementImpl extends CDOObjectImpl implements Requirement {
 					return !IMPLEMENTING_BO_TEAM_EDEFAULT.equals(getImplementingBOTeam());
 				}
 			case RequirementsPackage.REQUIREMENT__IMPLEMENTING_IT_TEAM:
+				// IMPLEMENTING_IT_TEAM_EDEFAULT is a compile time constant hence require null check to verify change.
 				if(IMPLEMENTING_IT_TEAM_EDEFAULT == null){
 					return getImplementingITTeam() != null;
 				}
@@ -973,6 +1023,7 @@ public class RequirementImpl extends CDOObjectImpl implements Requirement {
 					return !IMPLEMENTING_IT_TEAM_EDEFAULT.equals(getImplementingITTeam());
 				}
 			case RequirementsPackage.REQUIREMENT__PLANNED_RELEASE:
+				// PLANNED_RELEASE_EDEFAULT is a compile time constant hence require null check to verify change.
 				if(PLANNED_RELEASE_EDEFAULT == null){
 					return getPlannedRelease() != null;
 				}
@@ -980,6 +1031,7 @@ public class RequirementImpl extends CDOObjectImpl implements Requirement {
 					return !PLANNED_RELEASE_EDEFAULT.equals(getPlannedRelease());
 				}
 			case RequirementsPackage.REQUIREMENT__STATUS:
+				// STATUS_EDEFAULT is a compile time constant hence require null check to verify change.
 				if(STATUS_EDEFAULT == null){
 					return getStatus() != null;
 				}
@@ -989,6 +1041,7 @@ public class RequirementImpl extends CDOObjectImpl implements Requirement {
 			case RequirementsPackage.REQUIREMENT__IS_REGRESSION_REQUIREMENT:
 				return isIsRegressionRequirement() != IS_REGRESSION_REQUIREMENT_EDEFAULT;
 			case RequirementsPackage.REQUIREMENT__PLATFORM:
+				// PLATFORM_EDEFAULT is a compile time constant hence require null check to verify change.
 				if(PLATFORM_EDEFAULT == null){
 					return getPlatform() != null;
 				}
