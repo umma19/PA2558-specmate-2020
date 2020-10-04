@@ -99,7 +99,8 @@ public class JSONObject {
      * whilst Java's null is equivalent to the value that JavaScript calls
      * undefined.
      */
-    private static final class Null {
+    private static String JSON_Object = "JSONObject[";
+	private static final class Null {
 
         /**
          * There is only intended to be a single instance of the NULL object,
@@ -428,7 +429,7 @@ public class JSONObject {
         } else if (object instanceof JSONArray) {
             this.put(key, ((JSONArray) object).put(value));
         } else {
-            throw new JSONException("JSONObject[" + key
+            throw new JSONException(JSON_Object + key
                     + "] is not a JSONArray.");
         }
         return this;
@@ -477,7 +478,7 @@ public class JSONObject {
         }
         Object object = this.opt(key);
         if (object == null) {
-            throw new JSONException("JSONObject[" + quote(key) + "] not found.");
+            throw new JSONException(JSON_Object + quote(key) + "] not found.");
         }
         return object;
     }
@@ -503,7 +504,7 @@ public class JSONObject {
                         .equalsIgnoreCase("true"))) {
             return true;
         }
-        throw new JSONException("JSONObject[" + quote(key)
+        throw new JSONException(JSON_Object + quote(key)
                 + "] is not a Boolean.");
     }
 
@@ -523,7 +524,7 @@ public class JSONObject {
             return object instanceof Number ? ((Number) object).doubleValue()
                     : Double.parseDouble((String) object);
         } catch (Exception e) {
-            throw new JSONException("JSONObject[" + quote(key)
+            throw new JSONException(JSON_Object + quote(key)
                     + "] is not a number.");
         }
     }
@@ -544,7 +545,7 @@ public class JSONObject {
             return object instanceof Number ? ((Number) object).intValue()
                     : Integer.parseInt((String) object);
         } catch (Exception e) {
-            throw new JSONException("JSONObject[" + quote(key)
+            throw new JSONException(JSON_Object + quote(key)
                     + "] is not an int.");
         }
     }
@@ -563,7 +564,7 @@ public class JSONObject {
         if (object instanceof JSONArray) {
             return (JSONArray) object;
         }
-        throw new JSONException("JSONObject[" + quote(key)
+        throw new JSONException(JSON_Object + quote(key)
                 + "] is not a JSONArray.");
     }
 
@@ -581,7 +582,7 @@ public class JSONObject {
         if (object instanceof JSONObject) {
             return (JSONObject) object;
         }
-        throw new JSONException("JSONObject[" + quote(key)
+        throw new JSONException(JSON_Object + quote(key)
                 + "] is not a JSONObject.");
     }
 
@@ -601,7 +602,7 @@ public class JSONObject {
             return object instanceof Number ? ((Number) object).longValue()
                     : Long.parseLong((String) object);
         } catch (Exception e) {
-            throw new JSONException("JSONObject[" + quote(key)
+            throw new JSONException(JSON_Object + quote(key)
                     + "] is not a long.");
         }
     }
@@ -662,7 +663,7 @@ public class JSONObject {
         if (object instanceof String) {
             return (String) object;
         }
-        throw new JSONException("JSONObject[" + quote(key) + "] not a string.");
+        throw new JSONException(JSON_Object + quote(key) + "] not a string.");
     }
 
     /**
