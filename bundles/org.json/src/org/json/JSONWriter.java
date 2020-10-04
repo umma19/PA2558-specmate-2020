@@ -260,11 +260,8 @@ public class JSONWriter {
             throw new JSONException("Nesting error.");
         }
         this.top -= 1;
-        this.mode = this.top == 0
-            ? 'd'
-            : this.stack[this.top - 1] == null
-            ? 'a'
-            : 'k';
+        m = this.stack[this.top - 1] == null ? 'a' : 'k';
+        this.mode = this.top == 0 ? 'd' : m;
     }
 
     /**
