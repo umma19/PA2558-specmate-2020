@@ -138,7 +138,7 @@ public class RequirementImpl extends CDOObjectImpl implements Requirement {
 	 * @generated
 	 * @ordered
 	 */
-	protected static String SOURCE_EDEFAULT = null;
+	protected static final String SOURCE_EDEFAULT = null;
 
 	/**
 	 * The default value of the '{@link #isLive() <em>Live</em>}' attribute.
@@ -168,7 +168,7 @@ public class RequirementImpl extends CDOObjectImpl implements Requirement {
 	 * @generated
 	 * @ordered
 	 */
-	protected static String TAC_EDEFAULT = null;
+	protected static final String TAC_EDEFAULT = null;
 
 	/**
 	 * The default value of the '{@link #getImplementingUnit() <em>Implementing Unit</em>}' attribute.
@@ -178,7 +178,7 @@ public class RequirementImpl extends CDOObjectImpl implements Requirement {
 	 * @generated
 	 * @ordered
 	 */
-	protected static String IMPLEMENTING_UNIT_EDEFAULT = null;
+	protected static final String IMPLEMENTING_UNIT_EDEFAULT = null;
 
 	/**
 	 * The default value of the '{@link #getImplementingBOTeam() <em>Implementing BO Team</em>}' attribute.
@@ -188,7 +188,7 @@ public class RequirementImpl extends CDOObjectImpl implements Requirement {
 	 * @generated
 	 * @ordered
 	 */
-	protected static String IMPLEMENTING_BO_TEAM_EDEFAULT = null;
+	protected static final String IMPLEMENTING_BO_TEAM_EDEFAULT = null;
 
 	/**
 	 * The default value of the '{@link #getImplementingITTeam() <em>Implementing IT Team</em>}' attribute.
@@ -198,7 +198,7 @@ public class RequirementImpl extends CDOObjectImpl implements Requirement {
 	 * @generated
 	 * @ordered
 	 */
-	protected static String IMPLEMENTING_IT_TEAM_EDEFAULT = null;
+	protected static final String IMPLEMENTING_IT_TEAM_EDEFAULT = null;
 
 	/**
 	 * The default value of the '{@link #getPlannedRelease() <em>Planned Release</em>}' attribute.
@@ -208,7 +208,7 @@ public class RequirementImpl extends CDOObjectImpl implements Requirement {
 	 * @generated
 	 * @ordered
 	 */
-	protected static String PLANNED_RELEASE_EDEFAULT = null;
+	protected static final String PLANNED_RELEASE_EDEFAULT = null;
 
 	/**
 	 * The default value of the '{@link #getStatus() <em>Status</em>}' attribute.
@@ -218,7 +218,7 @@ public class RequirementImpl extends CDOObjectImpl implements Requirement {
 	 * @generated
 	 * @ordered
 	 */
-	protected static String STATUS_EDEFAULT = null;
+	protected static final String STATUS_EDEFAULT = null;
 
 	/**
 	 * The default value of the '{@link #isIsRegressionRequirement() <em>Is Regression Requirement</em>}' attribute.
@@ -238,7 +238,7 @@ public class RequirementImpl extends CDOObjectImpl implements Requirement {
 	 * @generated
 	 * @ordered
 	 */
-	protected static String PLATFORM_EDEFAULT = null;
+	protected static final String PLATFORM_EDEFAULT = null;
 
 	/**
 	 * <!-- begin-user-doc -->
