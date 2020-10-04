@@ -101,8 +101,7 @@ public class UsermodelFactoryImpl extends EFactoryImpl implements UsermodelFacto
 	 */
 	@Override
 	public User createUser() {
-		UserImpl user = new UserImpl();
-		return user;
+		return new UserImpl();
 	}
 
 	/**

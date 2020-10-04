@@ -176,6 +176,9 @@ public class UserImpl extends CDOObjectImpl implements User {
 				return getPassWord();
 			case UsermodelPackage.USER__PROJECT_NAME:
 				return getProjectName();
+			default: 
+				// call logging service to store the unexpected case for later review
+				break;
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -202,6 +205,9 @@ public class UserImpl extends CDOObjectImpl implements User {
 			case UsermodelPackage.USER__PROJECT_NAME:
 				setProjectName((String)newValue);
 				return;
+			default: 
+				// call logging service to store the unexpected case for later review
+				break;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -226,6 +232,9 @@ public class UserImpl extends CDOObjectImpl implements User {
 			case UsermodelPackage.USER__PROJECT_NAME:
 				setProjectName(PROJECT_NAME_EDEFAULT);
 				return;
+			default: 
+				// call logging service to store the unexpected case for later review
+				break;
 		}
 		super.eUnset(featureID);
 	}
@@ -246,6 +255,9 @@ public class UserImpl extends CDOObjectImpl implements User {
 				return PASS_WORD_EDEFAULT == null ? getPassWord() != null : !PASS_WORD_EDEFAULT.equals(getPassWord());
 			case UsermodelPackage.USER__PROJECT_NAME:
 				return PROJECT_NAME_EDEFAULT == null ? getProjectName() != null : !PROJECT_NAME_EDEFAULT.equals(getProjectName());
+			default: 
+				// call logging service to store the unexpected case for later review
+				break;
 		}
 		return super.eIsSet(featureID);
 	}
