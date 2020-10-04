@@ -57,7 +57,7 @@ SOFTWARE.
  * @version 2011-11-24
  */
 public class JSONWriter {
-    private static final int maxdepth = 200;
+    private static final int MAX_DEPTH = 200;
 
     /**
      * The comma flag determines if a comma should be output before the next
@@ -96,7 +96,7 @@ public class JSONWriter {
     public JSONWriter(Writer w) {
         this.comma = false;
         this.mode = 'i';
-        this.stack = new JSONObject[maxdepth];
+        this.stack = new JSONObject[MAX_DEPTH];
         this.top = 0;
         this.writer = w;
     }
@@ -270,7 +270,7 @@ public class JSONWriter {
      * @throws JSONException If nesting is too deep.
      */
     private void push(JSONObject jo) throws JSONException {
-        if (this.top >= maxdepth) {
+        if (this.top >= MAX_DEPTH) {
             throw new JSONException("Nesting too deep.");
         }
         this.stack[this.top] = jo;
