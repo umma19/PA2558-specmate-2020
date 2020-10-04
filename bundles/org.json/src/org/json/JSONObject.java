@@ -188,7 +188,7 @@ public class JSONObject {
      *             If there is a syntax error in the source string or a
      *             duplicated key.
      */
-    public JSONObject(JSONTokener x) throws JSONException {
+    public JSONObject(JSONTokener x) {
         this();
         char c;
         String key;
@@ -320,7 +320,7 @@ public class JSONObject {
      *                If there is a syntax error in the source string or a
      *                duplicated key.
      */
-    public JSONObject(String source) throws JSONException {
+    public JSONObject(String source) {
         this(new JSONTokener(source));
     }
 
@@ -386,7 +386,7 @@ public class JSONObject {
      * @throws JSONException
      *             If the value is an invalid number or if the key is null.
      */
-    public JSONObject accumulate(String key, Object value) throws JSONException {
+    public JSONObject accumulate(String key, Object value) {
         testValidity(value);
         Object object = this.opt(key);
         if (object == null) {
@@ -416,7 +416,7 @@ public class JSONObject {
      *             If the key is null or if the current value associated with
      *             the key is not a JSONArray.
      */
-    public JSONObject append(String key, Object value) throws JSONException {
+    public JSONObject append(String key, Object value) {
         testValidity(value);
         Object object = this.opt(key);
         if (object == null) {
@@ -467,7 +467,7 @@ public class JSONObject {
      * @throws JSONException
      *             if the key is not found.
      */
-    public Object get(String key) throws JSONException {
+    public Object get(String key) {
         if (key == null) {
             throw new JSONException("Null key.");
         }
@@ -488,7 +488,7 @@ public class JSONObject {
      *             if the value is not a Boolean or the String "true" or
      *             "false".
      */
-    public boolean getBoolean(String key) throws JSONException {
+    public boolean getBoolean(String key) {
         Object object = this.get(key);
         if (object.equals(Boolean.FALSE)
                 || (object instanceof String && ((String) object)
@@ -513,7 +513,7 @@ public class JSONObject {
      *             if the key is not found or if the value is not a Number
      *             object and cannot be converted to a number.
      */
-    public double getDouble(String key) throws JSONException {
+    public double getDouble(String key) {
         Object object = this.get(key);
         try {
             return object instanceof Number ? ((Number) object).doubleValue()
@@ -534,7 +534,7 @@ public class JSONObject {
      *             if the key is not found or if the value cannot be converted
      *             to an integer.
      */
-    public int getInt(String key) throws JSONException {
+    public int getInt(String key) {
         Object object = this.get(key);
         try {
             return object instanceof Number ? ((Number) object).intValue()
@@ -554,7 +554,7 @@ public class JSONObject {
      * @throws JSONException
      *             if the key is not found or if the value is not a JSONArray.
      */
-    public JSONArray getJSONArray(String key) throws JSONException {
+    public JSONArray getJSONArray(String key) {
         Object object = this.get(key);
         if (object instanceof JSONArray) {
             return (JSONArray) object;
@@ -572,7 +572,7 @@ public class JSONObject {
      * @throws JSONException
      *             if the key is not found or if the value is not a JSONObject.
      */
-    public JSONObject getJSONObject(String key) throws JSONException {
+    public JSONObject getJSONObject(String key) {
         Object object = this.get(key);
         if (object instanceof JSONObject) {
             return (JSONObject) object;
@@ -591,7 +591,7 @@ public class JSONObject {
      *             if the key is not found or if the value cannot be converted
      *             to a long.
      */
-    public long getLong(String key) throws JSONException {
+    public long getLong(String key) {
         Object object = this.get(key);
         try {
             return object instanceof Number ? ((Number) object).longValue()
@@ -653,7 +653,7 @@ public class JSONObject {
      * @throws JSONException
      *             if there is no string value for the key.
      */
-    public String getString(String key) throws JSONException {
+    public String getString(String key) {
         Object object = this.get(key);
         if (object instanceof String) {
             return (String) object;
@@ -1086,7 +1086,7 @@ public class JSONObject {
      *             If the key is null.
      */
     public JSONObject put(String key, int value) throws JSONException {
-        this.put(key, new Integer(value));
+        this.put(key, new Integer (value));
         return this;
     }
 
