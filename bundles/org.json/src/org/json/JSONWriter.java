@@ -2,6 +2,7 @@ package org.json;
 
 import java.io.IOException;
 import java.io.Writer;
+import java.lang.*;
 
 /*
 Copyright (c) 2006 JSON.org
@@ -297,7 +298,7 @@ public class JSONWriter {
      * @throws JSONException If the number is not finite.
      */
     public JSONWriter value(double d) throws JSONException {
-        return this.value(new Double(d));
+        return this.value(Double.valueOf(d));
     }
 
     /**
