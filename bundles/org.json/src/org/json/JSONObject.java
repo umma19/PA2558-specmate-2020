@@ -151,6 +151,10 @@ public class JSONObject {
     /**
      * Construct an empty JSONObject.
      */
+    private static final String[] NO_STRING = new String[0];
+    /*
+     * Construct an empty string array.
+     */
     public JSONObject() {
         this.map = new HashMap<String, Object>();
     }
@@ -610,7 +614,7 @@ public class JSONObject {
     public static String[] getNames(JSONObject jo) {
         int length = jo.length();
         if (length == 0) {
-            return null;
+            return NO_STRING;
         }
         Iterator<String> iterator = jo.keys();
         String[] names = new String[length];
@@ -629,13 +633,13 @@ public class JSONObject {
      */
     public static String[] getNames(Object object) {
         if (object == null) {
-            return null;
+            return NO_STRING;
         }
         Class klass = object.getClass();
         Field[] fields = klass.getFields();
         int length = fields.length;
         if (length == 0) {
-            return null;
+            return NO_STRING;
         }
         String[] names = new String[length];
         for (int i = 0; i < length; i += 1) {
