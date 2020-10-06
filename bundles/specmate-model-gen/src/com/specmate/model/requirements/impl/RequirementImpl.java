@@ -138,6 +138,11 @@ public class RequirementImpl extends CDOObjectImpl implements Requirement {
 	 * @generated
 	 * @ordered
 	 */
+
+	/**  
+	* Use of Lazy final(non-constant final variable created with a type-specific default value)
+	* source : https://cr.openjdk.java.net/~jrose/draft/lazy-final.html#:~:text=The%20uninitialized%20default%20value%20(null,initialized%20shortly%20it%20is%20created.&text=In%20addition%2C%20the%20language%20does,final%20to%20be%20initialized%20twice. 
+	*/
 	protected static final String SOURCE_EDEFAULT = null;
 
 	/**
@@ -168,6 +173,11 @@ public class RequirementImpl extends CDOObjectImpl implements Requirement {
 	 * @generated
 	 * @ordered
 	 */
+
+	/**  
+	* Use of Lazy final(non-constant final variable created with a type-specific default value)
+	* source : https://cr.openjdk.java.net/~jrose/draft/lazy-final.html#:~:text=The%20uninitialized%20default%20value%20(null,initialized%20shortly%20it%20is%20created.&text=In%20addition%2C%20the%20language%20does,final%20to%20be%20initialized%20twice. 
+	*/
 	protected static final String TAC_EDEFAULT = null;
 
 	/**
@@ -178,6 +188,11 @@ public class RequirementImpl extends CDOObjectImpl implements Requirement {
 	 * @generated
 	 * @ordered
 	 */
+
+	/**  
+	* Use of Lazy final(non-constant final variable created with a type-specific default value)
+	* source : https://cr.openjdk.java.net/~jrose/draft/lazy-final.html#:~:text=The%20uninitialized%20default%20value%20(null,initialized%20shortly%20it%20is%20created.&text=In%20addition%2C%20the%20language%20does,final%20to%20be%20initialized%20twice. 
+	*/
 	protected static final String IMPLEMENTING_UNIT_EDEFAULT = null;
 
 	/**
@@ -188,6 +203,16 @@ public class RequirementImpl extends CDOObjectImpl implements Requirement {
 	 * @generated
 	 * @ordered
 	 */
+
+	/**  
+	* Use of Lazy final(non-constant final variable created with a type-specific default value)
+	* source : https://cr.openjdk.java.net/~jrose/draft/lazy-final.html#:~:text=The%20uninitialized%20default%20value%20(null,initialized%20shortly%20it%20is%20created.&text=In%20addition%2C%20the%20language%20does,final%20to%20be%20initialized%20twice. 
+	*/
+
+	/**  
+	* Use of Lazy final(non-constant final variable created with a type-specific default value)
+	* source : https://cr.openjdk.java.net/~jrose/draft/lazy-final.html#:~:text=The%20uninitialized%20default%20value%20(null,initialized%20shortly%20it%20is%20created.&text=In%20addition%2C%20the%20language%20does,final%20to%20be%20initialized%20twice. 
+	*/
 	protected static final String IMPLEMENTING_BO_TEAM_EDEFAULT = null;
 
 	/**
@@ -198,6 +223,11 @@ public class RequirementImpl extends CDOObjectImpl implements Requirement {
 	 * @generated
 	 * @ordered
 	 */
+
+	/**  
+	* Use of Lazy final(non-constant final variable created with a type-specific default value)
+	* source : https://cr.openjdk.java.net/~jrose/draft/lazy-final.html#:~:text=The%20uninitialized%20default%20value%20(null,initialized%20shortly%20it%20is%20created.&text=In%20addition%2C%20the%20language%20does,final%20to%20be%20initialized%20twice. 
+	*/
 	protected static final String IMPLEMENTING_IT_TEAM_EDEFAULT = null;
 
 	/**
@@ -208,6 +238,11 @@ public class RequirementImpl extends CDOObjectImpl implements Requirement {
 	 * @generated
 	 * @ordered
 	 */
+	
+	/**  
+	* Use of Lazy final(non-constant final variable created with a type-specific default value)
+	* source : https://cr.openjdk.java.net/~jrose/draft/lazy-final.html#:~:text=The%20uninitialized%20default%20value%20(null,initialized%20shortly%20it%20is%20created.&text=In%20addition%2C%20the%20language%20does,final%20to%20be%20initialized%20twice. 
+	*/
 	protected static final String PLANNED_RELEASE_EDEFAULT = null;
 
 	/**
@@ -218,6 +253,11 @@ public class RequirementImpl extends CDOObjectImpl implements Requirement {
 	 * @generated
 	 * @ordered
 	 */
+
+	/**  
+	* Use of Lazy final(non-constant final variable created with a type-specific default value)
+	* source : https://cr.openjdk.java.net/~jrose/draft/lazy-final.html#:~:text=The%20uninitialized%20default%20value%20(null,initialized%20shortly%20it%20is%20created.&text=In%20addition%2C%20the%20language%20does,final%20to%20be%20initialized%20twice. 
+	*/
 	protected static final String STATUS_EDEFAULT = null;
 
 	/**
@@ -238,6 +278,11 @@ public class RequirementImpl extends CDOObjectImpl implements Requirement {
 	 * @generated
 	 * @ordered
 	 */
+
+	/**  
+	* Use of Lazy final(non-constant final variable created with a type-specific default value)
+	* source : https://cr.openjdk.java.net/~jrose/draft/lazy-final.html#:~:text=The%20uninitialized%20default%20value%20(null,initialized%20shortly%20it%20is%20created.&text=In%20addition%2C%20the%20language%20does,final%20to%20be%20initialized%20twice. 
+	*/
 	protected static final String PLATFORM_EDEFAULT = null;
 
 	/**
@@ -934,27 +979,75 @@ public class RequirementImpl extends CDOObjectImpl implements Requirement {
 			case RequirementsPackage.REQUIREMENT__EXT_ID2:
 				return EXT_ID2_EDEFAULT == null ? getExtId2() != null : !EXT_ID2_EDEFAULT.equals(getExtId2());
 			case RequirementsPackage.REQUIREMENT__SOURCE:
-				return SOURCE_EDEFAULT == null ? getSource() != null : !SOURCE_EDEFAULT.equals(getSource());
+				// SOURCE_EDEFAULT is a compile time constant hence require nullability check to verify change.
+				if(SOURCE_EDEFAULT == null){
+					return getSource() != null;
+				}
+				else{
+					return !SOURCE_EDEFAULT.equals(getSource());
+				}
 			case RequirementsPackage.REQUIREMENT__LIVE:
 				return isLive() != LIVE_EDEFAULT;
 			case RequirementsPackage.REQUIREMENT__NUMBER_OF_TESTS:
 				return getNumberOfTests() != NUMBER_OF_TESTS_EDEFAULT;
 			case RequirementsPackage.REQUIREMENT__TAC:
-				return TAC_EDEFAULT == null ? getTac() != null : !TAC_EDEFAULT.equals(getTac());
+				// TAC_EDEFAULT is a compile time constant hence require null check to verify change.
+				if(TAC_EDEFAULT == null){
+					return getTac() != null;
+				}
+				else{
+					return !TAC_EDEFAULT.equals(getTac());
+				}
 			case RequirementsPackage.REQUIREMENT__IMPLEMENTING_UNIT:
-				return IMPLEMENTING_UNIT_EDEFAULT == null ? getImplementingUnit() != null : !IMPLEMENTING_UNIT_EDEFAULT.equals(getImplementingUnit());
+				// IMPLEMENTING_UNIT_EDEFAULT is a compile time constant hence require null check to verify change.
+				if(IMPLEMENTING_UNIT_EDEFAULT == null){
+					return getImplementingUnit() != null;
+				}
+				else{
+					return !IMPLEMENTING_UNIT_EDEFAULT.equals(getImplementingUnit());
+				}
 			case RequirementsPackage.REQUIREMENT__IMPLEMENTING_BO_TEAM:
-				return IMPLEMENTING_BO_TEAM_EDEFAULT == null ? getImplementingBOTeam() != null : !IMPLEMENTING_BO_TEAM_EDEFAULT.equals(getImplementingBOTeam());
+				// IMPLEMENTING_BO_TEAM_EDEFAULT is a compile time constant hence require null check to verify change.
+				if(IMPLEMENTING_BO_TEAM_EDEFAULT == null){
+					return getImplementingBOTeam() != null;
+				}
+				else{
+					return !IMPLEMENTING_BO_TEAM_EDEFAULT.equals(getImplementingBOTeam());
+				}
 			case RequirementsPackage.REQUIREMENT__IMPLEMENTING_IT_TEAM:
-				return IMPLEMENTING_IT_TEAM_EDEFAULT == null ? getImplementingITTeam() != null : !IMPLEMENTING_IT_TEAM_EDEFAULT.equals(getImplementingITTeam());
+				// IMPLEMENTING_IT_TEAM_EDEFAULT is a compile time constant hence require null check to verify change.
+				if(IMPLEMENTING_IT_TEAM_EDEFAULT == null){
+					return getImplementingITTeam() != null;
+				}
+				else{
+					return !IMPLEMENTING_IT_TEAM_EDEFAULT.equals(getImplementingITTeam());
+				}
 			case RequirementsPackage.REQUIREMENT__PLANNED_RELEASE:
-				return PLANNED_RELEASE_EDEFAULT == null ? getPlannedRelease() != null : !PLANNED_RELEASE_EDEFAULT.equals(getPlannedRelease());
+				// PLANNED_RELEASE_EDEFAULT is a compile time constant hence require null check to verify change.
+				if(PLANNED_RELEASE_EDEFAULT == null){
+					return getPlannedRelease() != null;
+				}
+				else{
+					return !PLANNED_RELEASE_EDEFAULT.equals(getPlannedRelease());
+				}
 			case RequirementsPackage.REQUIREMENT__STATUS:
-				return STATUS_EDEFAULT == null ? getStatus() != null : !STATUS_EDEFAULT.equals(getStatus());
+				// STATUS_EDEFAULT is a compile time constant hence require null check to verify change.
+				if(STATUS_EDEFAULT == null){
+					return getStatus() != null;
+				}
+				else{
+					return !STATUS_EDEFAULT.equals(getStatus());
+				}
 			case RequirementsPackage.REQUIREMENT__IS_REGRESSION_REQUIREMENT:
 				return isIsRegressionRequirement() != IS_REGRESSION_REQUIREMENT_EDEFAULT;
 			case RequirementsPackage.REQUIREMENT__PLATFORM:
-				return PLATFORM_EDEFAULT == null ? getPlatform() != null : !PLATFORM_EDEFAULT.equals(getPlatform());
+				// PLATFORM_EDEFAULT is a compile time constant hence require null check to verify change.
+				if(PLATFORM_EDEFAULT == null){
+					return getPlatform() != null;
+				}
+				else{
+					return !PLATFORM_EDEFAULT.equals(getPlatform());
+				}
 		}
 		return super.eIsSet(featureID);
 	}
@@ -967,15 +1060,19 @@ public class RequirementImpl extends CDOObjectImpl implements Requirement {
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == INamed.class) {
-			switch (derivedFeatureID) {
-				case RequirementsPackage.REQUIREMENT__NAME: return BasePackage.INAMED__NAME;
-				default: return -1;
+			if (derivedFeatureID == RequirementsPackage.REQUIREMENT__NAME) {
+				return BasePackage.INAMED__NAME;
+			}
+			else{
+				return -1;
 			}
 		}
 		if (baseClass == IDescribed.class) {
-			switch (derivedFeatureID) {
-				case RequirementsPackage.REQUIREMENT__DESCRIPTION: return BasePackage.IDESCRIBED__DESCRIPTION;
-				default: return -1;
+			if (derivedFeatureID == RequirementsPackage.REQUIREMENT__DESCRIPTION) {
+				return BasePackage.IDESCRIBED__DESCRIPTION;
+			}
+			else{
+				return -1;
 			}
 		}
 		if (baseClass == IRecycled.class) {
@@ -1012,15 +1109,19 @@ public class RequirementImpl extends CDOObjectImpl implements Requirement {
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == INamed.class) {
-			switch (baseFeatureID) {
-				case BasePackage.INAMED__NAME: return RequirementsPackage.REQUIREMENT__NAME;
-				default: return -1;
+			if (baseFeatureID == BasePackage.INAMED__NAME) {
+				return RequirementsPackage.REQUIREMENT__NAME;
+			}
+			else{
+				return -1;
 			}
 		}
 		if (baseClass == IDescribed.class) {
-			switch (baseFeatureID) {
-				case BasePackage.IDESCRIBED__DESCRIPTION: return RequirementsPackage.REQUIREMENT__DESCRIPTION;
-				default: return -1;
+			if (baseFeatureID == BasePackage.IDESCRIBED__DESCRIPTION) {
+				return RequirementsPackage.REQUIREMENT__DESCRIPTION;
+			}
+			else{
+				return -1;
 			}
 		}
 		if (baseClass == IRecycled.class) {
