@@ -1,5 +1,5 @@
 # Specmate
-test test
+Checking build process. umma19
 Specmate is a Web-based Modeling and Test-Generation Tool
 
 ## Setup
